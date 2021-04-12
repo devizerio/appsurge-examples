@@ -17,11 +17,11 @@
 
 import AppSurge
 
-extension ASProperty.ASString {
-    static let bannerText = ASProperty.ASString(["banner", "text"], "")
-    static let bannerURL = ASProperty.ASString(["banner", "url"], "")
+extension AppSurge.StringProperty {
+    static let bannerText = Self(["banner", "text"], "")
+    static let bannerURL = Self(["banner", "url"], "")
 }
 
-extension ASProperty.ASBoolean {
-    static let showBanner = ASProperty.ASBoolean(["banner", "show"], false)
+extension AppSurge.BooleanProperty {
+    static let showBanner = Self(["banner", "show"], false)
 }

@@ -15,14 +15,14 @@
 
 import AppSurge
 
-extension ASProperty.ASString {
-    static let myString = ASProperty.ASString("myString", "")
+extension AppSurge.StringProperty {
+    static let myString = Self("myString", "")
 }
 
-extension ASProperty.ASNumber {
-    static let myNumber = ASProperty.ASNumber("myNumber", 0)
+extension AppSurge.NumberProperty {
+    static let myNumber = Self("myNumber", 0)
 }
 
-extension ASProperty.ASBoolean {
-    static let myBoolean = ASProperty.ASBoolean("myBoolean", false)
+extension AppSurge.BooleanProperty {
+    static let myBoolean = Self("myBoolean", false)
 }
