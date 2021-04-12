@@ -1,8 +1,18 @@
 //
 //  ContentView.swift
-//  02 Banner/SwiftUI
+//  03 Direct Access/SwiftUI
 //
 //  Created by Jochen Bernard on 12/04/2021.
+//
+
+//
+//  {
+//      "banner": {
+//          "show": true,
+//          "text": "Hello, world!",
+//          "url": "https://www.example.com"
+//      }
+//  }
 //
 
 import SwiftUI
@@ -12,11 +22,11 @@ struct ContentView: View {
     @EnvironmentObject var surge: ASObservableObject
     
     var body: some View {
-        if (surge.get(.showBanner)) {
-            Text(surge.get(.bannerText))
+        if (surge.config["banner"]?["show"]?.boolean ?? false) {
+            Text(surge.config["banner"]?["text"]?.string ?? "")
                 .onTapGesture(perform: {
                     guard
-                        let url = URL(string: surge.get(.bannerURL))
+                        let url = URL(string: surge.config["banner"]?["url"]?.string ?? "")
                     else { return }
                     
                     UIApplication.shared.open(url)

@@ -1,8 +1,18 @@
 //
 //  ViewController.swift
-//  02 Banner/UIKit
+//  03 Direct Access/UIKit
 //
 //  Created by Jochen Bernard on 12/04/2021.
+//
+
+//
+//  {
+//      "banner": {
+//          "show": true,
+//          "text": "Hello, world!",
+//          "url": "https://www.example.com"
+//      }
+//  }
 //
 
 import UIKit
@@ -13,15 +23,15 @@ class ViewController: UIViewController {
 
     @IBAction func openURL(_ sender: Any) {
         guard
-            let url = URL(string: AppSurge.get(.bannerURL))
+            let url = URL(string: AppSurge.config["banner"]?["url"]?.string ?? "")
         else { return }
         
         UIApplication.shared.open(url)
     }
 
     @objc func update() {
-        bannerLabel.text = AppSurge.get(.bannerText)
-        bannerLabel.isHidden = !AppSurge.get(.showBanner)
+        bannerLabel.text = AppSurge.config["banner"]?["text"]?.string ?? ""
+        bannerLabel.isHidden = !AppSurge.config["banner"]?["show"]?.boolean ?? false
     }
 
     override func viewDidLoad() {

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppSurge
 
 struct ContentView: View {
     @EnvironmentObject var surge: ASObservableObject
