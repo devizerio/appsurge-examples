@@ -17,3 +17,7 @@ The same banner example but with direct access to the config.
 ## 04 Attributes
 
 A basic example of updating a user's attribute.
+
+## 05 Tags
+
+A basic example of updating a user's tag.
