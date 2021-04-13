@@ -13,3 +13,7 @@ A basic example of a banner with a text, url and show property.
 The same banner example but with direct access to the config.
 
 **_This is not recommended._**
+
+## 04 Attributes
+
+A basic example of updating a user's attribute.
