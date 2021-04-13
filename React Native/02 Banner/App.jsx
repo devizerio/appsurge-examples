@@ -6,7 +6,7 @@ import {
   TouchableWithoutFeedback
 } from "react-native";
 
-import * as AppSurge from "@appsurge/react-native";
+import AppSurge from "@appsurge/react-native";
 
 const bannerTextSelector = AppSurge.createConfigSelector(
   (config) => config.banner.text, ""

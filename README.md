@@ -21,3 +21,7 @@ A basic example of updating a user's attribute.
 ## 05 Tags
 
 A basic example of updating a user's tag.
+
+## 06 Refreshing Strategies
+
+A basic example of using refreshing strategies.

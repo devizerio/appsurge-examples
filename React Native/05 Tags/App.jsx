@@ -4,7 +4,7 @@ import {
   SafeAreaView,
 } from "react-native";
 
-import * as AppSurge from "@appsurge/react-native";
+import AppSurge from "@appsurge/react-native";
 
 AppSurge.initialize({ clientKey: "your-client-key" });
 
