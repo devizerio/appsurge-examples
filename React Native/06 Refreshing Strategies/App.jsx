@@ -8,7 +8,6 @@ import AppSurge, { useRefreshingStrategy } from "@appsurge/react-native";
 
 AppSurge.initialize({ clientKey: "your-client-key" });
 
-
 const App = () => {
   useRefreshingStrategy({
     onReturnFromBackground: true,

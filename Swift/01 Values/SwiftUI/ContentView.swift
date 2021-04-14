@@ -12,11 +12,13 @@ struct ContentView: View {
     @EnvironmentObject var surge: ASObservableObject
     
     var body: some View {
-        let string = surge.get(.myString)
-        let number = surge.get(.myNumber)
-        let boolean = surge.get(.myBoolean)
-
-        Text("Hello, World!")
+        VStack {
+            Text("myString value is \(surge.get(.myString))")
+            
+            Text("myNumber value is \(surge.get(.myNumber))")
+            
+            Text("myBoolean value is \(surge.get(.myBoolean))")
+        }
     }
 }
 

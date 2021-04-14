@@ -9,10 +9,14 @@ import UIKit
 import AppSurge
 
 class ViewController: UIViewController {
+    @IBOutlet weak var myStringLabel: UILabel!
+    @IBOutlet weak var myNumberLabel: UILabel!
+    @IBOutlet weak var myBooleanLabel: UILabel!
+
     @objc func update() {
-        let string = AppSurge.get(.myString)
-        let number = AppSurge.get(.myNumber)
-        let boolean = AppSurge.get(.myBoolean)
+        myStringLabel.text = AppSurge.get(.myString)
+        myNumberLabel.text = AppSurge.get(.myNumber)
+        myBooleanLabel.text = AppSurge.get(.myBoolean)
     }
 
     override func viewDidLoad() {

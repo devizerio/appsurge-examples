@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  SafeAreaView,
-  Text
-} from "react-native";
+import { SafeAreaView, Text } from "react-native";
 
 import AppSurge from "@appsurge/react-native";
 
@@ -27,7 +24,9 @@ const App = () => {
 
   return (
     <SafeAreaView>
-      <Text>Hello, World!</Text>
+      <Text>myString value is { myString }</Text>
+      <Text>myNumber value is { myNumber }</Text>
+      <Text>myBoolean value is { myBoolean }</Text>
     </SafeAreaView>
   );
 };
