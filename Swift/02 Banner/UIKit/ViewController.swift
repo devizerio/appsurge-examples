@@ -20,8 +20,10 @@ class ViewController: UIViewController {
     }
 
     @objc func update() {
-        bannerLabel.text = AppSurge.get(.bannerText)
-        bannerLabel.isHidden = !AppSurge.get(.showBanner)
+        DispatchQueue.main.async {
+            bannerLabel.text = AppSurge.get(.bannerText)
+            bannerLabel.isHidden = !AppSurge.get(.showBanner)
+        }
     }
 
     override func viewDidLoad() {

@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var myBooleanLabel: UILabel!
 
     @objc func update() {
-        myStringLabel.text = AppSurge.get(.myString)
-        myNumberLabel.text = AppSurge.get(.myNumber)
-        myBooleanLabel.text = AppSurge.get(.myBoolean)
+        DispatchQueue.main.async {
+            myStringLabel.text = AppSurge.get(.myString)
+            myNumberLabel.text = AppSurge.get(.myNumber)
+            myBooleanLabel.text = AppSurge.get(.myBoolean)
+        }
     }
 
     override func viewDidLoad() {
